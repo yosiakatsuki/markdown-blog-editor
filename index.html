@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -21,6 +22,10 @@
 	<header class="fixed-top">
 		<nav class="navbar navbar-light bg-light h-100">
 			<h1 class="h5 text-muted my-0">Markdown Blog Editor</h1>
+			<p class="my-0 text-muted">
+				<a class="text-muted mr-2" href="https://twitter.com/yosiakatsuki" target="_blank"><i class="fab fa-twitter"></i></a>
+				<a class="text-muted mr-2" href="https://github.com/yosiakatsuki/markdown-blog-editor" target="_blank"><i class="fab fa-github"></i></a>
+			</p>
 		</nav>
 	</header>
 	<main class="py-5">
@@ -31,7 +36,7 @@
 						<textarea id="editor-main" name="markdown" rows="8" cols="80"></textarea>
 					</div><!-- .col-6 -->
 					<div class="col-6">
-						<div class="row flex-column w-100 h-100">
+						<div class="row flex-column h-100">
 							<div class="col">
 								<div class="position-relative w-100 h-100">
 									<div class="card position-absolute h-100 w-100">
@@ -41,7 +46,7 @@
 							</div><!-- .col -->
 							<div class="col-auto mt-3 w-100">
 								<button id="html-copy" type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#copy">
-									HTMLをコピー
+									<i class="fas fa-paperclip mr-2"></i>HTMLをコピー
 								</button>
 							</div><!-- .col -->
 						</div><!-- .row -->
@@ -52,10 +57,13 @@
 	</main>
 	<footer class="fixed-bottom bg-light">
 		<div class="container-fluid h-100">
-			<div class="row align-items-center h-100">
-				<div class="col-12">
-					<p class="my-0 text-muted"><a class="text-muted" href="https://twitter.com/yosiakatsuki" target="_blank">@yosiakatsuki</a></p>
-				</div><!-- .col-12 -->
+			<div class="row align-items-center justify-content-between h-100">
+				<div class="col">
+					
+				</div><!-- .col -->
+				<div class="col-auto">
+					<p class="my-0 text-muted"><small>※画面構成や仕様は突然変更される場合がございますがご了承下さい</small></p>
+				</div><!-- .col -->
 			</div><!-- .row -->
 		</div>
 	</footer>

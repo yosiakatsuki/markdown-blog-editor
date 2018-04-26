@@ -18,6 +18,7 @@ Markdownで書いて
 - `h`タグの上下に空行1つ
 - `<!--more-->`タグの上下に空行1つ
 - `<pre>`タグの前後に空行1つ
+- URLのみの行はURLのみの行になるようにする（ブログカード対策）
 
 ## 利用ライブラリ
 
@@ -29,3 +30,4 @@ Markdownで書いて
 - [Highlight.js](https://github.com/isagalaev/highlight.js)
 - [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
 - [jQuery](https://github.com/jquery/jquery)
+- [Font Awesome](https://github.com/FortAwesome/Font-Awesome)

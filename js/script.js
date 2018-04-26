@@ -27,7 +27,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
 
 function previewMarked( text ) {
-  $('#preview').html( convertMarkdown( text ) )
+  $('#preview').html( marked( text ) )
   $('#preview pre code').each(function(i, block) {
       hljs.highlightBlock(block)
   });
@@ -70,5 +70,6 @@ function convertMarkdown( text ) {
     .replace('<!--more-->',"\n<!--more-->\n")
     .replace(/<pre>/g,"\n\n<pre>")
     .replace(/<\/pre>/g,"</pre>\n\n")
+    .replace(/<p><a.*?href="(https?)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)".*?<\/p>/g,"\n$1$2\n")
 }
 
