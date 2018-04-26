@@ -1,2 +1,2 @@
-# blog-editor
-ブログエディタ
+# Markdown Blog Editor
+Markdownでブログ書きたいオレオレブログエディタ
