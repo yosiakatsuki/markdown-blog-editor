@@ -1,0 +1,12 @@
+.CodeMirror {
+	height: calc(100vh - 8rem);
+}
+#preview {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+header,
+footer {
+	height: 3rem;
+	overflow: hidden;
+}

@@ -4,9 +4,68 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/styles/default.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
+	<title>Markdown Blog Editor</title>
 </head>
 <body>
-	<h1>ここをキャンプ地とする</h1>
+	<header class="fixed-top">
+		<nav class="navbar navbar-light bg-light h-100">
+			<h1 class="h5 text-muted my-0">Markdown Blog Editor</h1>
+		</nav>
+	</header>
+	<main class="py-5">
+		<div class="py-3">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-6">
+						<textarea id="editor-main" name="markdown" rows="8" cols="80"></textarea>
+					</div><!-- .col-6 -->
+					<div class="col-6">
+						<div class="row flex-column w-100 h-100">
+							<div class="col">
+								<div class="position-relative w-100 h-100">
+									<div class="card position-absolute h-100 w-100">
+										<div id="preview" class="card-body p-3 markdown-body"></div><!-- #preview -->
+									</div><!-- .card -->
+								</div><!-- .position-relative -->
+							</div><!-- .col -->
+							<div class="col-auto mt-3 w-100">
+								<button id="html-copy" type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#copy">
+									HTMLをコピー
+								</button>
+							</div><!-- .col -->
+						</div><!-- .row -->
+					</div><!-- .col-6 -->
+				</div><!-- .row -->
+			</div><!-- .container -->
+		</div>
+	</main>
+	<footer class="fixed-bottom bg-light">
+		<div class="container-fluid h-100">
+			<div class="row align-items-center h-100">
+				<div class="col-12">
+					<p class="my-0 text-muted"><a class="text-muted" href="https://twitter.com/yosiakatsuki" target="_blank">@yosiakatsuki</a></p>
+				</div><!-- .col-12 -->
+			</div><!-- .row -->
+		</div>
+	</footer>
+	<div class="modal fade" id="copy" tabindex="-1" role="dialog" aria-labelledby="copy" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<p class="text-center m-0 py-3">コピーしました！</p>
+			</div>
+		</div>
+	</div>
+	<script src="./js/script.js"></script>
 </body>
 </html>
