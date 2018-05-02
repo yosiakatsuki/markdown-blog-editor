@@ -14,7 +14,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     toolbar: false,
     status: false
   })
-  
+
   if ( document.getElementById('editor-main').value ) {
     previewMarked( document.getElementById('editor-main').value )
   }
@@ -70,6 +70,5 @@ function convertMarkdown( text ) {
     .replace('<!--more-->',"\n<!--more-->\n")
     .replace(/<pre>/g,"\n\n<pre>")
     .replace(/<\/pre>/g,"</pre>\n\n")
-    .replace(/<p><a.*?href="(https?)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)".*?<\/p>/g,"\n$1$2\n")
+    .replace(/<p><a[^>]*?href="(https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)"[^>]*?>(https?:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)<\/a><\/p>/g,"\n$2\n")
 }
-
