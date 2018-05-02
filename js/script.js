@@ -12,7 +12,8 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     forceSync: true,
     spellChecker: false,
     toolbar: false,
-    status: false
+    status: false,
+    indentWithTabs: false
   })
 
   if ( document.getElementById('editor-main').value ) {
