@@ -19,3 +19,7 @@ footer {
 .CodeMirror .CodeMirror-code .cm-header-6 {
 	line-height: 1.2 !important;
 }
+
+.markdown-body img {
+	height: auto;
+}
